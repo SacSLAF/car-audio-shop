@@ -3,11 +3,11 @@
 use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 
 // Public Routes
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/about', function () {
     return view('about');
@@ -25,9 +25,11 @@ Route::get('/shop', function () {
     return view('shop.index');
 })->name('shop');
 
-Route::get('/product/{id}', function ($id) {
-    return view('shop.show');
-})->name('product.show');
+// Product Routes
+Route::get('/shop', [ProductController::class, 'index'])->name('shop');
+Route::get('/product/{product:slug}', [ProductController::class, 'show'])->name('product.show');
+Route::get('/category/{slug}', [ProductController::class, 'category'])->name('category.show');
+Route::get('/brand/{slug}', [ProductController::class, 'brand'])->name('brand.show');
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
