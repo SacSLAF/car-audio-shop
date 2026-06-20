@@ -26,7 +26,7 @@
     <div class="mt-16 bg-amber-50 rounded-lg p-8 text-center">
         <h2 class="text-2xl font-bold text-gray-800 mb-4">Need Professional Installation?</h2>
         <p class="text-gray-600 mb-6">Our certified technicians are ready to help you get the perfect sound.</p>
-        <a href="/contact" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-bold transition">
+        <a href="/contact" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-bold transition">
             Book Now
         </a>
     </div>

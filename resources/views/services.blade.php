@@ -3,7 +3,7 @@
 @section('title', 'Our Services - CarAudio Shop')
 
 @section('content')
-    <!-- Hero Section - Identical to About Page -->
+    <!-- Hero Section -->
     <section class="relative bg-gradient-to-r from-amber-600 to-amber-800 text-white py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
             <div class="absolute top-0 left-0 w-full h-full"
@@ -28,7 +28,6 @@
                 </p>
             </div>
         </div>
-        <!-- Service Icon Decoration -->
         <div class="absolute bottom-0 right-0 text-white/5 text-9xl">
             <i class="fas fa-tools"></i>
         </div>
@@ -49,6 +48,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Audio Setup Installation -->
                 <div
                     class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                     <div class="bg-gradient-to-r from-amber-500 to-amber-600 h-2"></div>
@@ -76,9 +76,14 @@
                                 <span>Sound deadening solutions</span>
                             </li>
                         </ul>
+                        <a href="{{ route('service-booking.index', ['service' => 'Audio Setup Installation']) }}"
+                            class="mt-4 inline-block w-full text-center bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            <i class="fas fa-calendar-check mr-1"></i> Book This Service
+                        </a>
                     </div>
                 </div>
 
+                <!-- Amplifier Installation -->
                 <div
                     class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                     <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-2"></div>
@@ -106,9 +111,14 @@
                                 <span>Gain and crossover tuning</span>
                             </li>
                         </ul>
+                        <a href="{{ route('service-booking.index', ['service' => 'Amplifier Installation']) }}"
+                            class="mt-4 inline-block w-full text-center bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            <i class="fas fa-calendar-check mr-1"></i> Book This Service
+                        </a>
                     </div>
                 </div>
 
+                <!-- System Tuning -->
                 <div
                     class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                     <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-2"></div>
@@ -135,6 +145,10 @@
                                 <span>Phase correction</span>
                             </li>
                         </ul>
+                        <a href="{{ route('service-booking.index', ['service' => 'System Tuning']) }}"
+                            class="mt-4 inline-block w-full text-center bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            <i class="fas fa-calendar-check mr-1"></i> Book This Service
+                        </a>
                     </div>
                 </div>
             </div>
@@ -153,6 +167,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Fog Lights -->
                 <div
                     class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                     <div class="bg-gradient-to-r from-yellow-400 to-yellow-600 h-2"></div>
@@ -180,9 +195,14 @@
                                 <span>Weatherproof installation</span>
                             </li>
                         </ul>
+                        <a href="{{ route('service-booking.index', ['service' => 'Fog Lights Installation']) }}"
+                            class="mt-4 inline-block w-full text-center bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            <i class="fas fa-calendar-check mr-1"></i> Book This Service
+                        </a>
                     </div>
                 </div>
 
+                <!-- LED Light Upgrades -->
                 <div
                     class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                     <div class="bg-gradient-to-r from-blue-400 to-blue-600 h-2"></div>
@@ -210,9 +230,14 @@
                                 <span>Daytime running lights</span>
                             </li>
                         </ul>
+                        <a href="{{ route('service-booking.index', ['service' => 'LED Light Upgrades']) }}"
+                            class="mt-4 inline-block w-full text-center bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            <i class="fas fa-calendar-check mr-1"></i> Book This Service
+                        </a>
                     </div>
                 </div>
 
+                <!-- All Kind of Lightings -->
                 <div
                     class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                     <div class="bg-gradient-to-r from-indigo-500 to-indigo-600 h-2"></div>
@@ -240,6 +265,10 @@
                                 <span>Custom lighting designs</span>
                             </li>
                         </ul>
+                        <a href="{{ route('service-booking.index', ['service' => 'All Kind of Lightings']) }}"
+                            class="mt-4 inline-block w-full text-center bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            <i class="fas fa-calendar-check mr-1"></i> Book This Service
+                        </a>
                     </div>
                 </div>
             </div>
@@ -258,6 +287,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Door Visors -->
                 <div
                     class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                     <div class="bg-gradient-to-r from-red-500 to-red-600 h-2"></div>
@@ -285,9 +315,14 @@
                                 <span>Weather-resistant materials</span>
                             </li>
                         </ul>
+                        <a href="{{ route('service-booking.index', ['service' => 'Door Visors Installation']) }}"
+                            class="mt-4 inline-block w-full text-center bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            <i class="fas fa-calendar-check mr-1"></i> Book This Service
+                        </a>
                     </div>
                 </div>
 
+                <!-- Carpets & Floor Mats -->
                 <div
                     class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                     <div class="bg-gradient-to-r from-gray-500 to-gray-700 h-2"></div>
@@ -314,9 +349,14 @@
                                 <span>Premium quality materials</span>
                             </li>
                         </ul>
+                        <a href="{{ route('service-booking.index', ['service' => 'Carpets & Floor Mats']) }}"
+                            class="mt-4 inline-block w-full text-center bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            <i class="fas fa-calendar-check mr-1"></i> Book This Service
+                        </a>
                     </div>
                 </div>
 
+                <!-- Rat Nets -->
                 <div
                     class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                     <div class="bg-gradient-to-r from-teal-500 to-teal-600 h-2"></div>
@@ -344,6 +384,10 @@
                                 <span>Custom fitting available</span>
                             </li>
                         </ul>
+                        <a href="{{ route('service-booking.index', ['service' => 'Rat Nets & Protection']) }}"
+                            class="mt-4 inline-block w-full text-center bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            <i class="fas fa-calendar-check mr-1"></i> Book This Service
+                        </a>
                     </div>
                 </div>
             </div>
@@ -362,6 +406,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Side Mirror Cameras -->
                 <div
                     class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                     <div class="bg-gradient-to-r from-pink-500 to-pink-600 h-2"></div>
@@ -389,9 +434,14 @@
                                 <span>Seamless integration</span>
                             </li>
                         </ul>
+                        <a href="{{ route('service-booking.index', ['service' => 'Side Mirror Cameras']) }}"
+                            class="mt-4 inline-block w-full text-center bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            <i class="fas fa-calendar-check mr-1"></i> Book This Service
+                        </a>
                     </div>
                 </div>
 
+                <!-- 360° View Cameras -->
                 <div
                     class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                     <div class="bg-gradient-to-r from-cyan-500 to-cyan-600 h-2"></div>
@@ -418,9 +468,14 @@
                                 <span>Recording capabilities</span>
                             </li>
                         </ul>
+                        <a href="{{ route('service-booking.index', ['service' => '360° View Cameras']) }}"
+                            class="mt-4 inline-block w-full text-center bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            <i class="fas fa-calendar-check mr-1"></i> Book This Service
+                        </a>
                     </div>
                 </div>
 
+                <!-- Reverse Camera -->
                 <div
                     class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                     <div class="bg-gradient-to-r from-orange-500 to-orange-600 h-2"></div>
@@ -447,6 +502,10 @@
                                 <span>All vehicle compatibility</span>
                             </li>
                         </ul>
+                        <a href="{{ route('service-booking.index', ['service' => 'Reverse Camera Systems']) }}"
+                            class="mt-4 inline-block w-full text-center bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            <i class="fas fa-calendar-check mr-1"></i> Book This Service
+                        </a>
                     </div>
                 </div>
             </div>
@@ -494,15 +553,13 @@
                 Contact us today for a free consultation and quote for your vehicle
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="/contact"
-                    class="inline-flex items-center justify-center bg-white text-amber-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg hover:shadow-xl">
-                    <i class="fas fa-calendar-check mr-2"></i>
-                    Book a Service
+                <a href="{{ route('service-booking.index') }}"
+                    class="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-amber-600 px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                    <i class="fas fa-calendar-check mr-2"></i> Book Now
                 </a>
                 <a href="tel:+15551234567"
-                    class="inline-flex items-center justify-center border-2 border-white hover:bg-white hover:text-amber-600 px-8 py-4 rounded-lg font-bold text-lg transition">
-                    <i class="fas fa-phone mr-2"></i>
-                    Call Now
+                    class="inline-flex items-center justify-center bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                    <i class="fas fa-phone mr-2"></i> Call Now
                 </a>
             </div>
         </div>
