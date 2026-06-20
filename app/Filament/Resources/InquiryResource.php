@@ -131,7 +131,7 @@ class InquiryResource extends Resource
                     ->visible(fn (Inquiry $record): bool => $record->status === 'pending'),
                 Tables\Actions\Action::make('markAsReplied')
                     ->label('Mark as Replied')
-                    ->icon('heroicon-o-reply')
+                    ->icon('heroicon-o-chat-bubble-left-right')
                     ->color('info')
                     ->action(function (Inquiry $record) {
                         $record->update(['status' => 'replied']);
@@ -166,7 +166,7 @@ class InquiryResource extends Resource
                         ->successNotificationTitle('Inquiries marked as read'),
                     Tables\Actions\BulkAction::make('markAsReplied')
                         ->label('Mark as Replied')
-                        ->icon('heroicon-o-reply')
+                        ->icon('heroicon-o-chat-bubble-left-right')
                         ->action(fn ($records) => $records->each->update(['status' => 'replied']))
                         ->deselectRecordsAfterCompletion()
                         ->successNotificationTitle('Inquiries marked as replied'),
