@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ServiceBookingController;
+use App\Http\Controllers\GalleryController;
 
 // Public Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -18,9 +19,8 @@ Route::get('/services', function () {
     return view('services');
 })->name('services');
 
-Route::get('/gallery', function () {
-    return view('gallery');
-})->name('gallery');
+Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
+Route::get('/gallery/{slug}', [GalleryController::class, 'show'])->name('gallery.show');
 
 Route::get('/shop', function () {
     return view('shop.index');
