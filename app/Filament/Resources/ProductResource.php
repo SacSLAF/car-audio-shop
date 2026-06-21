@@ -159,12 +159,17 @@ class ProductResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('main_image')
+                Tables\Columns\TextColumn::make('main_image')
                     ->label('Image')
-                    ->square()
-                    ->size(50)
-                    ->defaultImageUrl(function ($record) {
-                        return asset('images/no-image.png');
+                    ->html()
+                    ->formatStateUsing(function ($record) {
+                        if ($record->main_image) {
+                            $url = asset('storage/' . $record->main_image);
+                            return '<img src="' . $url . '" style="width:60px;height:60px;object-fit:cover;border-radius:8px;border:2px solid #f59e0b;">';
+                        }
+                        return '<div style="width:60px;height:60px;background:#e5e7eb;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#9ca3af;font-size:20px;">
+                                    <i class="fas fa-image"></i>
+                                </div>';
                     }),
                 Tables\Columns\TextColumn::make('name')
                     ->label('Product Name')
@@ -190,8 +195,7 @@ class ProductResource extends Resource
                 Tables\Columns\TextColumn::make('stock_quantity')
                     ->label('Stock')
                     ->badge()
-                    ->color(
-                        fn(string $state): string =>
+                    ->color(fn(string $state): string =>
                         $state <= 0 ? 'danger' : ($state <= 5 ? 'warning' : 'success')
                     ),
                 Tables\Columns\IconColumn::make('is_active')
